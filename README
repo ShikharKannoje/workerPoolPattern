@@ -1,0 +1,4 @@
+# The worker pool pattern
+This is a pattern which is used to handle multiple task asynchronously in an efficient way. It allows you to utilise the system's resource to an optimum level. This pattern is useful when you have a queue of task and you want to execute them in independently and in parallel.
+
+The basic idea of this pattern is to create a set of worker goroutines which would pick tasks from the a shared channel and execute them. This approch limits the program to grow beyong a certain limit and keep the number of concurrently running goroutines, preventing resource exahustion. 
